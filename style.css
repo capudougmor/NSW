@@ -1,0 +1,106 @@
+* {
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --title-color: #322153;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #322153;
+}
+
+body {
+  background: #f0f0f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#page-home {
+  height: 100vh;
+  background: url('./img/icones/home-background.svg') no-repeat;
+  background-position: 35vw bottom;
+}
+
+#page-home .content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+margin-top: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+header a {
+  display: flex;
+
+  color: var(--title-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header a span {
+  display: flex;
+  background: url('./img/icones/log-in.svg');
+
+  width: 20px;
+  height: 20px;
+}
+
+#page-home main {
+  max-width: 560px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+#page-home main h1 {
+  font-size: 54px;
+}
+
+#page-home main p {
+  font-size: 24px;
+  line-height: 38px;
+  margin-top: 28px;
+}
+
+#page-home main a {
+  width: 100%;
+  max-width: 360px;
+  height: 72px;
+  color: white;
+  font-weight: bolder;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+
+  margin-top: 48px;
+  background-color: #51fa51;
+  transition: 0.2s;
+}
+
+#page-home main a:hover {
+  background-color: #26a126;
+}
+ 
