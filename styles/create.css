@@ -1,0 +1,28 @@
+#page-create-point {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+  
+}
+
+ header.red {
+  margin-top: 48px;
+  padding: 40px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  margin-top: 80px;
+  background-color: white;
+  padding: 64px;
+  border-radius: 8px;
+
+  max-width: 700px;
+
+  margin: 80px auto;
+}
+

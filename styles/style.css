@@ -2,19 +2,43 @@
   font-family: 'Roboto Slab', serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+   
 }
 
 :root {
   --title-color: #322153;
 }
+body {
+  
+  background: #f7f7f6;
+  -webkit-font-smoothing: antialiased;
+}
 
 a {
   text-decoration: none;
+  
+  color: #322153;
+  font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
   color: #322153;
+}
+
+header a {
+  display: flex;
+
+}
+
+header a span {
+  margin-right: 16px;
+  display: flex;
+  background: url('../img/icones/arrow-left.svg');
+
+  width: 20px;
+  height: 20px;
 }
 
 
