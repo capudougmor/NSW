@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt_br ">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecoleta</title>
+{% extends "layout.html" %}
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="./styles/style.css">
+{% set pageId = "page-search" %}
+
+{% block title %}
+<title>Ecoleta</title>
+{% endblock %}
+
+{% block styles %}
   <link rel="stylesheet" href="./styles/search.css">
+{% endblock %}
 
 
-  <link rel="stylesheet" href="./styles/responsive.css">
-</head>
-<body>
- <div id="page-search">
-    
+{% block content %}
   <header class="red">
     <img src="./img/icones/logo.svg" alt="Logo">  
     <a href="/">
@@ -23,15 +19,15 @@
       Voltar para home
     </a>
   </header>
-
+  
   <main>
-
+  
     <h3>
       <strong>2 pontos encontrados</strong>
     </h3>
-
+  
     <div class="cards">
-
+  
       <div class="card">
         <img src="https://images.unsplash.com/photo-1579756423478-02bc82a97679?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=654&q=80" alt="">
         <h1>coletoria</h1>
@@ -42,7 +38,7 @@
           Número 260
         </p>
       </div>
-
+  
       <div class="card">
         <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
         <h1>Papersider</h1>
@@ -55,9 +51,10 @@
       </div>
     </div>
   </main>
+  
+{% endblock %} 
 
- </div>  
+{% block scripts %}
+  <script src="./scripts/script.js"></script>  
+{% endblock %} 
 
- <script src="./scripts/script.js"></script>  
-</body>
-</html>
