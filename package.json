@@ -1,0 +1,27 @@
+{
+  "name": "NSW",
+  "version": "1.0.0",
+  "description": "Aplicação web da NextLevelWeek",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon /src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capudougmor/NSW.git"
+  },
+  "keywords": [],
+  "author": "Douglas Mendes Assunção",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/capudougmor/NSW/issues"
+  },
+  "homepage": "https://github.com/capudougmor/NSW#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
