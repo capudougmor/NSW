@@ -38,10 +38,20 @@ form fieldset {
 
 form legend {
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 form legend h2 {
   font-size: 24px;
+}
+
+form legend span {
+  font-size: 14px;
+
+  color: #322153;   
 }
 
 form .field {
@@ -141,4 +151,19 @@ form button:hover {
 .items-grid li img,
 .items-grid li span {
   pointer-events: none;
+}
+
+@media (max-width: 900px) {
+
+  form .field-group {
+    flex-direction: column;
+  } 
+
+  form .field-group .field + .field {
+    margin-left: 0;
+  }
+
+  .items-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
