@@ -89,3 +89,24 @@ body::after {
   bottom: 0;
   z-index: -1;
 }
+
+@media (max-width: 900px) {
+  #page-search .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #page-search .cards img {
+    height: 200px;
+  }
+}
+
+@media (max-height: 760px) {
+  #page-search .cards {
+    grid-template-columns: 1fr;
+  }
+
+  #page-search .cards img {
+    height: 200px;
+  }
+  
+}
