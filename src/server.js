@@ -19,7 +19,7 @@ server.get('/', (req, res) => {
 
 
 server.get('/create-point', (req, res) => {
-  return res.render('create-point.html')
+  return res.render('create-point.html', {salved: true})
 })
 
 
@@ -28,7 +28,7 @@ server.post('/savepoint', async (req, res) => {
   const {image, name, address, number, city, items} = req.body
 
   await Place.create({image, name, address, number, city, items}).then(() => {
-    res.redirect('./partials/point-created.html')
+    res.render('create-point.html', {salved: true})
   }).catch(function(erro){
       res.send("Erro: places não foi cadastrado com sucesso!" + erro)
   })

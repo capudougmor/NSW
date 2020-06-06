@@ -9,6 +9,7 @@
 
 {% block styles %} 
   <link rel="stylesheet" href="./styles/create.css">
+  <link rel="stylesheet" href="./styles/modal.css">
 {% endblock %}
 
 {% block content %}
@@ -112,6 +113,10 @@
   </form>
 
 </main>
+
+  {% if salved %}
+   {% include "partials/point-created.html" %}
+  {% endif %}
 
 {% endblock%}
 
