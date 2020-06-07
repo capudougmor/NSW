@@ -2,6 +2,10 @@ const express = require('express')
 const server = express()
 const nunjucks = require('nunjucks')
 const Place = require('./database/Place')
+const {Op} = require('./database/db')
+
+
+
 
 nunjucks.configure('src/views', {
   express: server,
@@ -19,18 +23,18 @@ server.get('/', (req, res) => {
 
 
 server.get('/create-point', (req, res) => {
-  return res.render('create-point.html', {salved: true})
+  return res.render('create-point.html')
 })
 
 
 server.post('/savepoint', async (req, res) => {
 
-  const {image, name, address, number, city, items} = req.body
+  const {image, name, address, number, city, state, items} = req.body
 
-  await Place.create({image, name, address, number, city, items}).then(() => {
+  await Place.create({image, name, address, number, city, state, items}).then(() => {
     res.render('create-point.html', {salved: true})
   }).catch(function(erro){
-      res.send("Erro: places não foi cadastrado com sucesso!" + erro)
+      res.send("O ponto de coleta não foi cadastrado com sucesso!" + erro)
   })
 })
 
@@ -38,14 +42,25 @@ server.post('/savepoint', async (req, res) => {
 
 server.get('/search-results', (req, res) => {
   
-  Place.findAll().then((places) => {
+  const search = req.query.search
+
+  // if(search == "") {
+  //   return res.render('search-results.html', {total: 0})
+  // }
+  
+  Place.findAll(
+      // {where: {
+      // 'city': {
+      //   [Op.like]: search}
+      // }}
+    ).then((places) => {
     const total = places.length
 
     res.render('search-results.html', {places: places, total})
     console.log('Aqui estão seus registros: ')
-    console.log(places)
   })
 })
+
 
 
 server.listen(3000)

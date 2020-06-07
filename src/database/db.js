@@ -1,4 +1,7 @@
 const Sequelize = require('sequelize')
+const Op = Sequelize.Op;
+
+
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',
@@ -13,7 +16,8 @@ sequelize.authenticate().then(function(){
 
 module.exports = {
   Sequelize: Sequelize,
-  sequelize: sequelize
+  sequelize: sequelize,
+  Op: Op
 }
 
   

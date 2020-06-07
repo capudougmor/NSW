@@ -1,6 +1,6 @@
 document.querySelector('select[name=city]').disabled = true
 function populateUfs() {
-  const ufSelect = document.querySelector('select[name=uf]')
+  const ufSelect = document.querySelector('select[name=state]')
   
   fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
   .then(res => res.json())
@@ -42,7 +42,7 @@ function getCities(event) {
 
 
 document
-.querySelector('select[name=uf]')
+.querySelector('select[name=state]')
 .addEventListener('change', getCities)
 
 const collectedItems = document.querySelector('input[name=items]')
