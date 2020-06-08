@@ -11,7 +11,7 @@
 
 {% block content %}
   <div class="content">
-
+    
     <header class="red">
       <img src="./img/icones/logo.svg" alt="Logo">  
       <a href="/create-point">
@@ -20,17 +20,26 @@
       </a>
     </header>
     
-    <main>
-      <h1>{{ title }}</h1>
-  
-      <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
+    <section>
+      <main>
+        <h1>{{ title }}</h1>
+        
+        <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
+        
+        <a href="#"><span></span>
+          <strong>Pesquisar pontos de coleta</strong>
+        </a>      
+      </main>
       
-      <a href="#"><span></span>
-        <strong>Pesquisar pontos de coleta</strong>
-      </a>
+      <span id="img-home">
+        <img src="../img/icones/home-background.svg" alt="">
+      </span>
 
-    </main>
-
+    </section>
+    
+    <!-- <div class="wave">
+      <div style="height: 100%; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M213.19,0.00 C152.69,70.06 270.03,70.06 202.98,150.00 L500.00,150.00 L500.00,0.00 Z" style="stroke: none; fill: #08f;"></path></svg></div>
+    </div> -->
   </div>
 
   {% include "partials/modal.html" %}

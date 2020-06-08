@@ -1,27 +1,40 @@
-body {
-  background: #f0f0f5;
-  -webkit-font-smoothing: antialiased;
-}
 
 #page-home {
-  height: 100vh;
-  background: url('../img/icones/home-background.svg') no-repeat;
-  background-position: 35vw bottom;
-}
-
-#page-home .content {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  height: 100%;
-
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
+
+#page-home .content {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+  height: 60%;
+  max-height: 800px;
+  padding: 40px;
+  background-color: white;
+  
+  box-shadow: 0 10px 50px #000000af;
+  /* box-shadow: 0 10px 50px rgba(252, 56, 56, 0.9); */
+  border-radius: 24px;
+}
+
+.content section {
+  display: flex;
+}
+
+.content span#img-home img {
+  display: block;
+  height: 350px;
+  object-fit: cover;
+  width: auto;
+}
+
 header {
-margin-top: 48px;
+  padding-bottom: 40px;
 
   display: flex;
   align-items: center;
@@ -31,7 +44,7 @@ margin-top: 48px;
 
 header a {
   display: flex;
-
+  font-size: 1.6rem;
   color: var(--title-color);
   font-weight: 700;
   text-decoration: none;
@@ -46,36 +59,35 @@ header a span {
 }
 
 #page-home main {
-  max-width: 560px;
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: center;
   
 }
 
 #page-home main h1 {
-  font-size: 54px;
+  font-size: 4.8rem;
 }
 
 #page-home main p {
-  font-size: 24px;
-  line-height: 38px;
+  font-size: 2.4rem;
+  line-height: 3.8rem;
   margin-top: 28px;
 }
 
 #page-home main a {
   width: 100%;
-  max-width: 360px;
+  max-width: 300px;
   height: 72px;
   color: white;
+  font-size: 1.6rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
 
-  margin-top: 48px;
+  margin-top: 36px;
   background-color: #51fa51;
   transition: 0.2s;
 }
@@ -107,7 +119,17 @@ main a strong {
   text-align: center;
 }
 
-@media (max-width: 900px) {
+#modal .content {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+@media (max-width: 950px) {
+  html {
+    font-size: 50%;
+  }
+
   #page-home {
     background-position-x: 70vw;
   }
@@ -129,6 +151,10 @@ main a strong {
     transform: translateX(-50%);
   }
 
+  .content section {
+    flex-direction: column;
+  }
+
 }
 
 @media (max-height: 760px) {
@@ -137,3 +163,4 @@ main a strong {
     
   }
 }
+

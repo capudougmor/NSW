@@ -38,29 +38,28 @@ server.post('/savepoint', async (req, res) => {
   })
 })
 
-
-
 server.get('/search-results', (req, res) => {
   
   const search = req.query.search
-
-  // if(search == "") {
-  //   return res.render('search-results.html', {total: 0})
-  // }
   
-  Place.findAll(
-      // {where: {
-      // 'city': {
-      //   [Op.like]: search}
-      // }}
-    ).then((places) => {
-    const total = places.length
+  if(search == "") {
+      Place.findAll().then((places) => {
+        const total = places.length
 
-    res.render('search-results.html', {places: places, total})
-    console.log('Aqui estão seus registros: ')
-  })
+        res.render('search-results.html', {places: places, total})
+      })
+  } else {
+    Place.findAll({where: {
+        'city': {
+          [Op.like]: search}
+        }}
+      ).then((places) => {
+        const total = places.length
+
+      res.render('search-results.html', {places: places, total})
+    })
+  }        
 })
-
 
 
 server.listen(3000)

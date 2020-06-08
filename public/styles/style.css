@@ -1,15 +1,25 @@
 * {
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto Slab', serif;
-  box-sizing: border-box;
-   
+  box-sizing: border-box;   
+}
+
+html {
+  font-size: 62.5%;
 }
 
 :root {
   --title-color: #322153;
 }
+
 body {
-  
-  background: #f7f7f6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(147deg, #f6b323 0%, #F23c26 74%) no-repeat;
   -webkit-font-smoothing: antialiased;
 }
 

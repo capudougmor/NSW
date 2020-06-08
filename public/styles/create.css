@@ -1,29 +1,26 @@
-#page-create-point {
-  width: 90%;
-  max-width: 1100px;
-
-  margin: 0 auto;
-  
+#create-point {
+  height: 90%;
+  max-height: 900px;
 }
 
  header.red {
-  margin-top: 48px;
-  padding: 40px;
+  margin-top: 36px;
+  padding: 24px;
   display: flex;
 
   justify-content: space-between;
   align-items: center;
 }
 
-form {
-  margin-top: 80px;
+main {
   background-color: white;
-  padding: 64px;
-  border-radius: 8px;
+  padding: 48px;
+  border-radius: 24px;
 
-  max-width: 700px;
+  height: 90%;
 
-  margin: 80px auto;
+  width: 80%;
+  max-width: 900px;
 }
 
 form h1 {
