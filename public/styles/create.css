@@ -1,35 +1,31 @@
 #create-point {
-  height: 90%;
-  max-height: 900px;
+  top: 40%;
+  transform: translateY(30%);
+  background-color: white;
+  border-radius: 24px;
 }
 
- header.red {
-  margin-top: 36px;
+header.red {
   padding: 24px;
   display: flex;
 
   justify-content: space-between;
+}
+
+.red a {
   align-items: center;
 }
 
 main {
-  background-color: white;
   padding: 48px;
-  border-radius: 24px;
-
-  height: 90%;
-
-  width: 80%;
-  max-width: 900px;
 }
 
 form h1 {
-  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 form fieldset {
   margin-top: 64px;
-
   border: 0;
 }
 
@@ -42,13 +38,14 @@ form legend {
 }
 
 form legend h2 {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
-form legend span {
-  font-size: 14px;
 
+form legend span {
+  font-size: 1.4rem;
   color: #322153;   
+  align-items: center;
 }
 
 form .field {
@@ -67,7 +64,7 @@ form input,
 form select {
   background-color: #f0f0f7;
   border: 0;
-  font-size: 16px;
+  font-size: 1.6rem;
   padding: 16px 24px;
   
   border-radius: 6px;
@@ -98,7 +95,7 @@ form button {
   margin-top: 36px;
   background-color:  #51fa51;
   color: white;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: bold;
 
   border-radius: 8px;
@@ -113,7 +110,7 @@ form button:hover {
 
 .items-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 16px;
 }
 
@@ -129,7 +126,6 @@ form button:hover {
 
   text-align: center;
   cursor: pointer;
-
 }
 
 .items-grid li span {
@@ -151,7 +147,11 @@ form button:hover {
   pointer-events: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+
+  html {
+    font-size: 50%;
+  }
 
   form .field-group {
     flex-direction: column;

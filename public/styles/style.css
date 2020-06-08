@@ -13,7 +13,7 @@ html {
   --title-color: #322153;
 }
 
-body {
+body {  
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -21,6 +21,7 @@ body {
 
   background: linear-gradient(147deg, #f6b323 0%, #F23c26 74%) no-repeat;
   -webkit-font-smoothing: antialiased;
+
 }
 
 a {
