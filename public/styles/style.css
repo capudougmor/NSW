@@ -14,12 +14,13 @@ html {
 }
 
 body {  
-  height: 100vh;
+  height: 100vmax;
   display: flex;
   justify-content: center;
   align-items: center;
 
   background: linear-gradient(147deg, #f6b323 0%, #F23c26 74%) no-repeat;
+  background-size: 100%;
   -webkit-font-smoothing: antialiased;
 
 }
