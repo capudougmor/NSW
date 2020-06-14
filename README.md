@@ -1,6 +1,6 @@
 Aplicação web da NextLevelWeek
 <h1 align="center">
-    <img alt="Ecoleta" title="Ecoleta" src="./public/img/logo.svg" width="250px" />
+    <img alt="Ecoleta" title="Ecoleta" src="https://i.ibb.co/0KRjJrN/5.png" width="250px" />
 </h1>
 
 <p align="center">
@@ -18,7 +18,7 @@ Aplicação web da NextLevelWeek
 <br>
 
 <p align="center">
-  <img alt="Frontend" src="3" width="100%">
+  <img alt="Frontend" src="https://i.ibb.co/HBpBNZz/41.png" width="100%">
 </p>
 
 ## :rocket: Tecnologias
